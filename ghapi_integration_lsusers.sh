@@ -37,10 +37,11 @@ function list_users_with_read_access {
 }
 
 function helper {
-	expected_cmd_args=2
-	if [ $# -ne expected_cmd_args ]; then
-		echo " please execute the script with required command arguments \n with the organisation and repository name"
-
+    if [ $# -ne 2 ]; then
+        echo -e "Please run the script with 2 arguments: <organization/user> <repository>"
+        exit 1
+    fi
+}
 
 # Main script
 
